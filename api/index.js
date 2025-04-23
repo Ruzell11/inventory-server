@@ -10,10 +10,18 @@ const errorHandler = require("../src/middleware/errorHandler");
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:3001", "https://inventory-client-ebon.vercel.app"],
-    credentials: true,
+    origin: [
+      "http://localhost:3000",  // Local development on port 3000
+      "http://localhost:3001",  // Local development on port 3001
+      "https://inventory-client-ebon.vercel.app", // Your production client
+    ],
+    credentials: true, // Allow credentials (cookies, authorization headers, etc.)
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allowed methods
+    allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
   })
 );
+
+
 connectDb();
 const PORT = process.env.PORT;
 
