@@ -29,10 +29,6 @@ const userController = () => {
 
     const accessToken = createTokens(user_profile);
 
-    res.cookie("access-token", accessToken, {
-      maxAge: 60 * 60 * 24 * 30,
-    });
-    res.set("access-token", accessToken);
     res.status(HTTP_OK).json({
       success: SUCCESS,
       message: "User logged in",
