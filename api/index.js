@@ -10,7 +10,7 @@ const errorHandler = require("../src/middleware/errorHandler");
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:3001"],
+    origin: ["http://localhost:3000", "http://localhost:3001", "https://inventory-client-ebon.vercel.app/"],
     credentials: true,
   })
 );
