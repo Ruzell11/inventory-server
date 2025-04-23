@@ -37,6 +37,7 @@ const userController = () => {
       success: SUCCESS,
       message: "User logged in",
       user_details: {
+        token: accessToken,
         role_id: user_profile.role_id,
         id: user_profile.id,
       },
