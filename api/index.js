@@ -33,7 +33,7 @@ app.use(cookieParser());
 
 app.use("/api/v1", generalRoutes());
 
-app.use('/api/v1/test', (req, res) => {
+app.get('/api/v1/test', (req, res) => {
   res.json("Hello world");
 });
 
